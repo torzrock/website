@@ -1,0 +1,74 @@
+footer
+    width: 100vw
+    height: auto
+    position: relative
+    background: $dark 
+    background-attachment: fixed
+    background-size: contain
+    color: #ccc
+    +borderbox
+    padding: 0 5vw
+    +formobile
+        height: auto
+        padding: 0 12vw
+    
+    .wrapp
+        ul
+            margin: 0
+            padding: 0
+            list-style: none
+            display: block
+            overflow: hidden
+
+            li
+                display: block
+                height: auto
+                line-height: 30px
+                width: 200px
+                float: left
+                +formobile
+                    width: 50%
+                    min-height: 220px
+
+                h2
+                    display: block
+                    margin: 0 0 
+                    padding: 30px 0 10px
+                    font-family: $raleway
+                    font-weight: 900
+                    +formobile
+                        font-size: 12px
+                a
+                    text-decoration: none
+                    font-family: $opensanR
+                    color: #444
+                    display: block
+                    font-size: 12px
+                    overflow: hidden
+                    height: 20px
+                    line-height: 20px
+                    margin: 0 0 10px
+                    text-transform: uppercase
+                    +formobile
+                        font-size: 10px
+                        height: 15px
+                        line-height: 15px
+                    
+                    i
+                        font-size: 20px
+                        float: left
+                        margin-right: 10px
+
+    .copy
+        bottom: 20px
+        text-align: center
+        width: 100%
+        font-size: 13px
+        letter-spacing: 0
+        text-transform: capitalize
+        display: block
+        height: 50px
+        line-height: 50px
+        margin-top: 100px
+        font-family: $opensanR
+        color: #333

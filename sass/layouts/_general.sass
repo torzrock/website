@@ -1,0 +1,226 @@
+html
+    position: relative
+body
+    background-color: #000     
+    font-family: $opensanL, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+    font-weight: 300
+    overflow-x: hidden
+    position: relative
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    -moz-osx-font-smoothing: greyscale
+    -webkit-font-smoothing: antialiased
+    font-smooth: always
+    text-rendering: optimizeLegibility$imp
+    
+    
+a,img 
+    outline-width: 0
+    border: 0
+a
+    cursor: pointer$imp
+
+h1
+    font-size: 50px
+    font-weight: 100
+    display: block
+    margin: 0
+    padding: 20px 0
+    overflow: hidden
+h2
+    display: block
+    margin: 0
+    padding: 20px 0
+    overflow: hidden
+
+.splash
+    width: 100%
+    height: 100%
+    position: fixed
+    left: 0
+    top: 0
+    z-index: 11
+    +radialgradient(ellipse at center bottom , #1B2735 0%, #090A0F 100%)
+        
+    
+
+.iedead
+    display: block
+    width: 100%
+    height: 100%
+    position: fixed
+    left: 0
+    top: 0
+    z-index: 900
+    background: #000
+    
+    h1
+        font-family: $raleway
+        font-weight: 900
+        position: absolute
+        left: 0
+        top: 50%
+        font-size: 50px
+        line-height: 50px
+        color: #fff
+        width: 100%
+        text-align: center
+
+.pagewrapper
+    width: 100vw
+    height: auto
+    overflow: hidden
+    position: relative
+    background: #nb1
+    +transitionspeed(0.5s)
+    
+    &.menuopen
+        +transform(translate3d(-25vw,0px, 0px))
+        border-right: 1px #111 solid
+        +formobile
+            +transform(translate3d(-$open,0px, 0px))
+
+section, footer, nav
+    display: block
+    overflow: hidden
+    
+.wrapp
+    width: 100%
+    min-width: 280px
+    height: auto
+    overflow: hidden
+    position: relative
+    margin: 0 auto
+    display: block
+    +formobile
+        max-width: 90%
+
+.animate
+    opacity: 0
+
+
+    
+.displayN
+    display: none$imp
+    
+
+.fblikebox
+    position: fixed
+    left: 10px
+    top: 10px
+    color: #fff$imp
+    z-index: 99
+    +formobile
+        display: none
+    
+//Button
+.btn
+    display: block
+    max-width: 200px
+    height: 50px
+    line-height: 50px
+    +borderbox
+    text-align: center
+    padding: 0 10px
+    margin: 20px auto
+    text-decoration: none
+    color: #fff
+    font-family: $opensanR
+    text-transform: uppercase
+    font-size: 11px
+    +bradius(5px)
+    
+    
+    &.instacolor
+        +transitionspeed(1s)
+        +radialgradient(ellipse at center bottom , #517fa4 10%, #243949 90%)
+        &:hover
+            +radialgradient(ellipse at center bottom , #243949 10%, #517fa4 90%)
+
+.moreinfo
+    display: block
+    width: auto
+    float: right
+    height: 30px
+    color: #fff
+    line-height: 30px
+    padding: 0 10px
+    +bradius(5px)
+    text-decoration: none
+    font-family: $opensanR
+    margin-top: 20px
+    +radialgradient(ellipse at center bottom ,#a73737 10%, #7a2828 90%)
+    &:hover
+        +radialgradient(ellipse at center bottom , #7a2828 10%, #a73737 90%)
+    +formobile
+        float: none 
+        width: 90px
+        margin: 20px auto
+        text-align: center
+    
+.more
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 80px
+    display: block
+    font-family: $opensanR
+    width: 50px
+    height: auto
+    color: #fff
+    margin: 10px auto
+    font-size: 12px
+    text-align: center
+    +transitionspeed(0.5s)
+
+    &.dark
+        color: #333
+    
+    i
+        font-size: 40px
+        display: block
+        +transitionspeed(0.5s)
+    &.open
+        i
+            +rotate(225deg)
+#brands
+    bottom: 0
+
+
+        
+//back to top
+.backtop
+    position: fixed
+    width: 50px
+    height: 50px
+    line-height: 50px
+    text-align: center
+    font-size: 40px
+    color: #c00
+    left: 20px
+    bottom: 20px
+    z-index: 9
+    display: none
+    
+//animation
+.slantbottom
+    width: 120%
+    height: 100px
+    background: #f3f3f3
+    position: absolute
+    left: -10px
+    bottom: -72px
+    +boxshadow(#000 0 -10px 50px)
+    +transform(rotate(2deg))
+    
+    &.dark
+        background: $dark
+    
+.slanttop
+    @extend .slantbottom
+    +transform(rotate(-2deg))
+    bottom: auto
+    top: -72px
+    +boxshadow(#000 0 10px 50px)
+    
+
+            

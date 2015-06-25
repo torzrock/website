@@ -1,0 +1,81 @@
+# Begin hotlink protection #
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^http://circonhotel.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.circonhotel.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://amikatravels.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.amikatravels.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://elmundotoursph.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.elmundotoursph.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://justwritejulie.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.justwritejulie.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://autologicmedia.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.autologicmedia.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://email.amikatravels.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.email.amikatravels.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://circonhotel.autologicmedia.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.circonhotel.autologicmedia.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://test.autologicmedia.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.test.autologicmedia.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://bioenzyme.autologicmedia.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.bioenzyme.autologicmedia.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://ama.autologicmedia.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.ama.autologicmedia.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://batch2000.autologicmedia.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.batch2000.autologicmedia.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://amikanew.autologicmedia.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.amikanew.autologicmedia.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://palawenos.autologicmedia.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.palawenos.autologicmedia.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://autologicmedia.fatcow.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.autologicmedia.fatcow.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://soteramansion.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.soteramansion.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://myama.co.cc/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.myama.co.cc/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://palawenos.co.cc/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.palawenos.co.cc/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.kamiabayresort.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://kamiabayresort.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.sophiasgardenresort.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://sophiasgardenresort.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.frontendph.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://frontendph.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.jeffreyturingan.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://jeffreyturingan.com/.*$ [NC]
+RewriteRule .(gif|jpg|png|ico)$ - [NC]
+# End hotlink protection #
+
+# ----------------------------------------------------------------------
+# Proper MIME type for all files
+# ----------------------------------------------------------------------
+
+
+# JavaScript
+#   Normalize to standard type (it's sniffed in IE anyways) 
+#   tools.ietf.org/html/rfc4329#section-7.2
+AddType application/javascript         js
+
+# Audio
+AddType audio/ogg                      oga ogg
+AddType audio/mp4                      m4a
+AddType audio/mp3                      mpeg
+
+# Video
+AddType video/ogg                      ogv
+AddType video/mp4                      mp4 m4v
+AddType video/webm                     webm
+
+# SVG
+#   Required for svg webfonts on iPad
+#   twitter.com/FontSquirrel/status/14855840545
+AddType     image/svg+xml              svg svgz 
+AddEncoding gzip                       svgz
+                                       
+# Webfonts                             
+AddType application/vnd.ms-fontobject  eot
+AddType application/x-font-ttf    ttf ttc
+AddType font/opentype                  otf
+AddType application/x-font-woff        woff
+
+
+

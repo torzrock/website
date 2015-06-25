@@ -1,0 +1,183 @@
+//ABOUT
+.intro
+    h1
+        float: left
+        color: #111
+        font-size: 80px
+        font-family: $raleway
+        font-weight: 900
+        width: 50%
+        text-align: left
+        margin: 0
+        display: block
+        +borderbox
+        padding: 80px 100px
+        letter-spacing: -4px
+        +desktopS
+            font-size: 70px
+            padding: 80px 50px
+        +fortablet
+            padding: 80px 0
+            font-size: 60px
+        +formobile
+            float: none
+            width: 100%
+            font-size: 50px
+            text-align: center
+            margin: 0 0 20px
+            padding: 0 0 30px
+            border-bottom: 1px #ccc solid
+
+        small
+            display: block
+            letter-spacing: 0
+            font-family: $raleway
+            font-weight: 900
+            font-size: 30px
+            +formobile
+                font-size: 20px
+        sub
+            font-size: 30px
+            display: block
+            letter-spacing: -2px
+            +formobile
+                font-size: 20px
+
+.biobox
+    width: 50%
+    float: right
+    height: auto
+    color: #777
+    font-family: $opensanR
+    +borderbox
+    padding: 50px 20px
+    text-align: left
+    +formobile
+        float: none
+        width: 100%
+        color: #444
+        text-align: center
+        padding: 0 20px
+
+    
+    h1
+        text-align: left
+        text-transform: capitalize
+        color: #333
+        
+    p
+        font-size: 20px
+        display: block
+        margin: 20px auto
+        +formobile
+            font-size: 14px$imp
+        
+        strong
+            font-size: 24px
+            +formobile
+                font-size: 18px$imp
+            
+
+            
+            
+.moreme
+    width: 100%
+    height: 100%
+    position: fixed
+    left: 100%
+    top: 0
+    z-index: 100
+    +radialgradient(ellipse at center top ,#3A6073 10%, #16222A 90%)
+    +transformstyle(preserve-3d)
+    +transitionspeed(0.5s)
+        
+    &.show
+        +transform(translate3d(-100%,0,0))
+        
+    .close
+        position: absolute
+        right: 20px
+        top: 20px
+        color: #fff
+        font-size: 30px
+        z-index: 9
+    
+    .personalinfo
+        width: 90%
+        height: 90vh
+        +radialgradient(ellipse at center top ,#eef2f3 10%, #8e9eab 90%)
+        margin: 5vh auto
+        overflow: auto
+        +borderbox
+        padding: 30px 
+        font-family: $opensanR
+        
+        .tbtpic
+            display: block
+            width: 200px
+            height: 200px
+            padding: 10px
+            border: 2px #ccc dashed
+            margin: 0 auto
+            +formobile
+                width: 150px
+                height: 150px
+            
+            img
+                max-width: 100%
+            
+        
+        h1
+            font-family: $opensanR
+            font-weight: 100
+            text-align: center
+            +formobile
+                font-size: 25px
+            
+            small
+                font-size: 15px
+                display: block
+                line-height: 30px
+                +formobile
+                    font-size: 12px
+                    line-height: 20px
+                
+                em
+                    font-size: 20px
+                    +formobile
+                        font-size: 15px
+                a
+                    text-decoration: none
+                    color: inherit
+            
+        h2
+            font-size: 30px
+            +formobile
+                font-size: 20px
+            
+        p
+            display: block
+            height: auto
+            line-height: 30px
+            margin: 0
+            +formobile
+                font-size: 14px
+                line-height: 20px
+            
+            label
+                font-weight: 400
+                display: block
+                float: left
+                width: 180px
+                text-align: left
+                margin-right: 0
+                +formobile
+                    width: auto
+                    float: none
+                    display: inline
+                
+            
+        
+        
+        
+        
